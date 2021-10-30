@@ -1,15 +1,12 @@
 import "./employers-list-item.css";
 
-const EmployersListItem = ({ name, salary, inc, }) => {
-  
+const EmployersListItem = ({ name, salary, classIncrease }) => {
+
   let classNames = "list-group-item d-flex justify-content-between";
-  console.log(inc);
-  if (inc) {
+
+  if (classIncrease) {
     classNames += ' increase';
-    console.log('True');
-  } else {
-    console.log('False:' + inc );
-  }
+  } 
     
   return (
         <li className={classNames}>

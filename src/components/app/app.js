@@ -8,12 +8,13 @@ import './app.css';
 function App() {
   
   const data = [
-    {name: 'John C.', salary: 500, inc: 'false' },
-    { name: 'Alex M.', salary: 3000, inc: 'false' },
-    { name: 'Carl W.', salary: 5000, inc: 'false' },
+    { name: 'John C.', salary: 800, classIncrease: false },
+    { name: 'Alex M.', salary: 3000, classIncrease: true },
+    { name: 'Carl W.', salary: 5000, classIncrease: false },
   ];
   
   return (
+    // console.log(data[0].classIncrease),
     <div className="app">
       <AppInfo/>
       <div className="search-panel">
@@ -23,6 +24,7 @@ function App() {
       <EmployersList data={data} />
       <EmployersAddForm/>
     </div>
+    
   );
 }
 
